@@ -1,0 +1,113 @@
+{
+  "$ref": "#/definitions/episodes",
+  "definitions": {
+    "episodes": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "moon_phase": {
+          "type": "string"
+        },
+        "zodiac_energy": {
+          "type": "string"
+        },
+        "numerology": {
+          "type": "string"
+        },
+        "recipe": {
+          "type": "string"
+        },
+        "ingredients": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "instructions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "video_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "reflection": {
+          "type": "string"
+        },
+        "prep_time": {
+          "type": "string"
+        },
+        "cook_time": {
+          "type": "string"
+        },
+        "servings": {
+          "type": [
+            "string",
+            "number"
+          ]
+        },
+        "featured_image": {
+          "type": "string"
+        },
+        "hero_image": {
+          "type": "string"
+        },
+        "step_images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "nutrition_focus": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "chef_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "date",
+        "moon_phase",
+        "zodiac_energy",
+        "numerology",
+        "recipe",
+        "ingredients",
+        "instructions",
+        "video_url",
+        "reflection"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
